@@ -1,0 +1,262 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Using the default font */
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.Logo{
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    user-select: none;
+}
+.Navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+/* Try to style this my own way, after finishing the project */
+.Navigation a::after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    left: 0;
+    bottom: -6px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.Navigation a:hover::after{
+    transform: scaleX(1);
+}
+.Navigation button{
+    margin-left: 40px;
+    width: 100px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    transition: 0.5s;
+}
+/* Style the button such that it glows when hovering upon it */
+.Navigation button:hover{
+    width: 105px;
+    height: 32px;
+    border: 2px solid lime;
+    box-shadow: 10px 0 20px lime, -10px 0 20px lime, 0 10px 20px lime, 0 -10px 20px lime;
+}
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 0.5s ease,height 0.2s ease;
+
+}
+.wrapper .formBox{
+    width: 100%;
+    padding: 40px;
+}
+.formBox h2{
+    font-size: 2em;
+    color: rgb(0, 0, 0, 0.7);
+    text-align: center;
+}
+.inputBox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162932;
+    margin: 30px 0;
+}
+.inputBox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.7);
+    position-try-order: none;
+    transition: 1s;
+}
+.inputBox input:focus~label, .inputBox input:valid~label{
+    top: -5px;
+}
+.inputBox input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1em;
+    color: silver;
+    font-weight: 500;
+    padding: 0 35px 0 5px;
+}
+.inputBox .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 57px;
+}
+.remember-forget{
+    font-size: 0.9em;
+    color: rgba(0, 0 , 0, 0.7);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forget label input{
+    accent-color: rgba(0, 0, 0, 0.7);
+    margin-right: 3px;
+}
+.remember-forget a{
+    color: rgba(0, 0 , 0, 0.7);
+    text-decoration: none;
+}
+.remember-forget a:hover{
+    text-decoration: underline;
+    color: lime;
+    font-size: 1.2em;
+    transition: 1s;
+}
+.LoginBtn1{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    outline: none;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+.LoginBtn1:hover{
+    height: 32px;
+    border: 2px solid lime;3
+}
+.register{
+    font-size: 0.9em;
+    color: rgba(0, 0 , 0, 0.7);
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.register p a{
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    font-weight: 600;
+}
+.register a:hover{
+    text-decoration: underline;
+    color: lime;
+    font-size: 1.2em;
+    transition: 1s;
+}
+/* Check out this code for understanding */
+.wrapper .formBox.login{ 
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+} 
+.wrapper.active .formBox.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+.wrapper .formBox.Regist{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+.wrapper.active .formBox.Regist{
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}
+.wrapper.active-popup{
+    transform: scale(1);
+}
+.CloseIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    font-size: 1.5em;
+    background: #162932;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    border-bottom-left-radius: 10px;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+.CloseIcon:hover{
+    border-left: 2px solid lime;
+    border-bottom: 2px solid lime;
+    color: lime;
+}
+.TermsConditions{
+    font-size: 0.9em;
+    color: rgba(0, 0 , 0, 0.7);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+}
+.TermsConditions a{
+    margin-left: 5px;
+    color: rgba(0, 0 , 0, 0.7);
+    text-decoration: none;
+}
+.TermsConditions label input{
+    accent-color: rgba(0, 0, 0, 0.7);
+    margin-right: 3px;
+}
+.TermsConditions a:hover{
+    text-decoration: underline;
+    color: lime;
+    font-size: 1.2em;
+    transition: 1s;
+}

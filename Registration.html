@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Registration.css">
+        <title>SubZero</title>
+    </head>
+    <body>
+        <header>
+            <h2 class="Logo">_zer0</h2>
+            <nav class="Navigation">
+                <a href="">Home</a>
+                <a href="">Services</a>
+                <a href="">Contact</a>
+                <a href="">About</a>
+                <button class="LoginBtn">Login</button>
+            </nav>
+        </header>
+        <div class="wrapper">
+            <span class="CloseIcon"><ion-icon name="close"></ion-icon></ion-icon></span>
+            <div class="formBox login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="inputBox">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required>
+                        <label>
+                            Email
+                         </label>
+                    </div>
+                    <div class="inputBox">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span> 
+                        <input type="password" required>
+                        <label>Password
+                         </label>
+                    </div>
+                    <div class="remember-forget">
+                        <label><input type="checkbox">Remember me.</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="LoginBtn1">Login</button>
+                    <div class="register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="formBox Regist">
+                <h2>Registration</h2>
+                <form action="#">
+                    <div class="inputBox">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" required>
+                        <label>
+                            Username
+                         </label>
+                    </div>
+                    <div class="inputBox">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required>
+                        <label>
+                            Email
+                         </label>
+                    </div>
+                    <div class="inputBox">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span> 
+                        <input type="password" required>
+                        <label>Password
+                         </label>
+                    </div>
+                    <div class="TermsConditions">
+                        <label><input type="checkbox">I agree to the </label>
+                        <a href="#"> terms & conditions</a>
+                    </div>
+                    <button type="submit" class="LoginBtn1">Register</button>
+                    <div class="register">
+                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="Registration.js"></script>
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
